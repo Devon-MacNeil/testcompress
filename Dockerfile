@@ -41,7 +41,8 @@ RUN groupadd -g 999 appuser && \
 USER appuser
 
 WORKDIR /home/appuser/
-RUN git clone https://github.com/dblalock/lzbench.git
+#RUN git clone https://github.com/dblalock/lzbench.git
+RUN git clone https://github.com/Devon-MacNeil/testcompress.git
 WORKDIR /home/appuser/lzbench
 RUN make clean && make
 
