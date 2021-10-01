@@ -2,7 +2,7 @@
 
 import os
 
-DATASETS_DIR = os.path.expanduser("C:/Users/me_th/Desktop/datasets/")
+DATASETS_DIR = os.path.expanduser("/home/appuser/datasets")
 
 
 def to_path(*args):
