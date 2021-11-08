@@ -11,7 +11,7 @@ import matplotlib as mpl
 from . import files
 
 # change this if you aren't me
-DATASETS_DIR = os.path.expanduser('C:/Users/me_th/Desktop/datasets/compress')
+DATASETS_DIR = os.path.expanduser('/home/appuser/datasets/compress')
 
 FIG_SAVE_DIR = 'figs'
 RESULTS_SAVE_DIR = 'results'
