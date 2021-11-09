@@ -189,7 +189,7 @@ def _decomp_vs_ratio_plot(dset, ax, df):
     df = df[~rm_mask]
 
     # algos = list(df['Algorithm'])
-    ratios = (100. / df['Ratio']).as_matrix()
+    ratios = (100. / df['Ratio']).to_numpy()
 
     # for i, algo in enumerate(list(df['Algorithm'])):  # undo artificial boost from 0 padding
     for i, algo in enumerate(list(df['Algorithm'])):  # undo artificial boost from 0 padding
@@ -202,12 +202,12 @@ def _decomp_vs_ratio_plot(dset, ax, df):
     df['Algorithm'] = df['Algorithm'].apply(_clean_algo_name)
     algos = list(df['Algorithm'])
 
-    comp_speeds = df['Compression speed'].as_matrix()
+    comp_speeds = df['Compression speed'].to_numpy()
     # ratios = df['Ratio']
     # used_delta = list(df['Deltas'])
 
     # compress_speeds = df['Compression speed'].as_matrix()
-    decompress_speeds = df['Decompression speed'].as_matrix()
+    decompress_speeds = df['Decompression speed'].to_numpy()
     # ratios = (100. / df['Ratio']).as_matrix()
 
     # compute colors for each algorithm in scatterplot
