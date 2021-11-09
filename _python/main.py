@@ -665,7 +665,7 @@ def run_multicore_queries():
 def main():
     #_run_experiment(nbits=8, dsets=['ampd_gas'], algos=['Zstd', 'FSE'])
     #_run_experiment(nbits=8, dsets=['ampd_gas'], algos=['FSE'])
-    _run_experiment(nbits=8, dsets=['ampd_gas'], algos=['Huffman'])
+    _run_experiment(nbits=8, dsets=['ucr'], algos=['Huffman'])
 
     kwargs = pyience.parse_cmd_line()
 
