@@ -504,10 +504,10 @@ def boxplot_ucr(save=True, preproc_plot=False, memlimit=-1, results_path=None):
 
             df = _fix_algo_col_names(df)
 
-            # ratios1 = df['Sprintz -1'].as_matrix()
-            # ratios2 = df['Sprintz -2'].as_matrix()
-            ratios1 = df['SprintzDelta'].as_matrix()
-            ratios2 = df['SprintzFIRE'].as_matrix()
+            # ratios1 = df['Sprintz -1'].to_numpy()
+            # ratios2 = df['Sprintz -2'].to_numpy()
+            ratios1 = df['SprintzDelta'].to_numpy()
+            ratios2 = df['SprintzFIRE'].to_numpy()
             num_wins = np.sum(ratios2 > ratios1)
             rel_improvements = (ratios2 - ratios1) / ratios1
             from scipy import stats
@@ -837,7 +837,7 @@ def _speed_vs_ndims_fig_v2(results_path, ylabel, top_quantity, bottom_quantity,
 
                 ax.plot(x, y, label=algo, lw=1)
 
-    y = y.as_matrix()
+    y = y.to_numpy()
     y[:] = 7500  # from repeated measurements across many experiments...
     for ax in axes.ravel():
         ax.plot(x, y, '--', label='Memcpy', lw=1)
