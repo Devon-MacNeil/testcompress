@@ -1147,7 +1147,7 @@ def main():
 
     # print("USE_WHICH_ALGOS: ", cfg.USE_WHICH_ALGOS)
 
-    decomp_vs_ratio_fig(nbits=8)
+    _decomp_vs_ratio_fig("Temp title",nbits=8)
     decomp_vs_ratio_fig_success()
     decomp_vs_ratio_fig_failure()
     cd_diagram_ours_vs_others()
