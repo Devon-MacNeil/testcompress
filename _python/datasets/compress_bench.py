@@ -9,8 +9,8 @@ from joblib import Memory
 # from . utils.files import ensure_dir_exists
 from .. import files
 
-from . import ampds, ucr, pamap, uci_gas#, msrc
-from . import paths
+from .. import ampds, ucr, pamap, uci_gas#, msrc
+from .. import paths
 
 from .. import compress
 
